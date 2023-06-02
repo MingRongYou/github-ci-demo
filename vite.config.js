@@ -13,10 +13,5 @@ export default defineConfig({
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
     }
-  },
-  server: {
-    host: 'mingrongyou.github.io',
-    port: 443,
-    https: true
   }
 });
