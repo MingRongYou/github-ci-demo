@@ -1,70 +1,53 @@
+<script setup>
+import HelloWorld from "./components/HelloWorld.vue";
+import TheWelcome from "./components/TheWelcome.vue";
+</script>
+
 <template>
-  <div class="app">
-    <div class="background"></div>
-    <h1>情人节快乐！</h1>
-    <div class="heart-container">
-      <div class="heart"></div>
+  <header>
+    <img
+      alt="Vue logo"
+      class="logo"
+      src="./assets/logo.svg"
+      width="125"
+      height="125"
+    />
+
+    <div class="wrapper">
+      <HelloWorld msg="Love Branda" />
     </div>
-    <p>我爱你！</p>
-  </div>
+  </header>
+
+  <main>
+    <TheWelcome />
+  </main>
 </template>
 
-<style>
-.app {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  font-family: Arial, sans-serif;
+<style scoped>
+header {
+  line-height: 1.5;
 }
 
-.background {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: pink;
-  z-index: -1;
+.logo {
+  display: block;
+  margin: 0 auto 2rem;
 }
 
-.heart-container {
-  position: relative;
-  width: 100px;
-  height: 100px;
-  margin: 20px;
-}
+@media (min-width: 1024px) {
+  header {
+    display: flex;
+    place-items: center;
+    padding-right: calc(var(--section-gap) / 2);
+  }
 
-.heart {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100px;
-  height: 100px;
-  background-color: #f44336;
-  transform: rotate(-45deg);
-  transform-origin: 50% 50%;
-  border-radius: 50%;
-}
+  .logo {
+    margin: 0 2rem 0 0;
+  }
 
-.heart::before,
-.heart::after {
-  content: "";
-  position: absolute;
-  width: 100px;
-  height: 100px;
-  background-color: #f44336;
-  border-radius: 50%;
-}
-
-.heart::before {
-  top: -50px;
-  left: 0;
-}
-
-.heart::after {
-  top: 0;
-  left: 50px;
+  header .wrapper {
+    display: flex;
+    place-items: flex-start;
+    flex-wrap: wrap;
+  }
 }
 </style>
