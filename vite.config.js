@@ -6,9 +6,6 @@ import vue from '@vitejs/plugin-vue';
 export default defineConfig({
   plugins: [vue()],
   base: '/github-ci-demo/',
-  build: {
-    publicPath: 'https://mingrongyou.github.io/github-ci-demo/',
-  },
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
