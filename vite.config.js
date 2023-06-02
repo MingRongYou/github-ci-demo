@@ -7,12 +7,7 @@ export default defineConfig({
   plugins: [vue()],
   base: '/github-ci-demo/',
   build: {
-    assetsDir: 'assets',
-    rollupOptions: {
-      output: {
-        entryFileNames: 'assets/[name]-[hash][ext]'
-      }
-    }
+    publicDir: 'assets',
   },
   resolve: {
     alias: {
