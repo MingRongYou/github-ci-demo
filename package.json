@@ -4,7 +4,7 @@
   "private": false,
   "scripts": {
     "dev": "vite",
-    "build": "vite build && node update-script-src.js",
+    "build": "vite build",
     "preview": "vite preview"
   },
   "dependencies": {

@@ -7,7 +7,7 @@ export default defineConfig({
   plugins: [
     vue(),
   ],
-  base: '/github-ci-demo/',
+  base: process.env.VITE_BASE_URL,
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
