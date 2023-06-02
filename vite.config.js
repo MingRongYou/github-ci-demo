@@ -13,6 +13,6 @@ export default defineConfig({
     }
   },
   build: {
-    assetsDir: 'dist'
+    assetsFileName: process.env.NODE_ENV === 'production' ? '[name].[contenthash].[ext]' : '[name].[ext]'
   }
 })
