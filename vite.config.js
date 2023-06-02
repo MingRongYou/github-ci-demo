@@ -7,7 +7,7 @@ export default defineConfig({
   plugins: [vue()],
   base: '/github-ci-demo/',
   build: {
-    publicDir: 'assets',
+    publicPath: 'https://mingrongyou.github.io/github-ci-demo/',
   },
   resolve: {
     alias: {
