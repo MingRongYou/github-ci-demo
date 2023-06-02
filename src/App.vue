@@ -1,5 +1,6 @@
 <template>
   <div class="app">
+    <div class="background"></div>
     <h1>情人节快乐！</h1>
     <div class="heart-container">
       <div class="heart"></div>
@@ -15,8 +16,17 @@
   align-items: center;
   justify-content: center;
   height: 100vh;
-  background-color: #fde2e4;
   font-family: Arial, sans-serif;
+}
+
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: pink;
+  z-index: -1;
 }
 
 .heart-container {
