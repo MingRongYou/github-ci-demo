@@ -10,7 +10,7 @@ export default defineConfig({
     assetsDir: 'assets',
     rollupOptions: {
       output: {
-        manualChunks: undefined
+        entryFileNames: 'assets/[name]-[hash][ext]'
       }
     }
   },
@@ -19,4 +19,9 @@ export default defineConfig({
       '@': fileURLToPath(new URL('./src', import.meta.url))
     }
   },
+  server: {
+    host: 'mingrongyou.github.io',
+    port: 443,
+    https: true
+  }
 });
